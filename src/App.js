@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import 'animate.css';
+
 
 class App extends Component {
   constructor(props) {
@@ -38,7 +40,7 @@ class App extends Component {
         <div className="header">Editeur d'article de blog - 
         <span className="name yellow">&nbsp;Ryan, Antoine, Richard</span>
         </div>
-        <div className={`alert ${messageClass}`}>{message}</div>
+        <div className={`alert ${messageClass}${this.state.text.length < 60 ? '' : ' animate__bounceIn'}`}>{message}</div>
         <textarea className="textarea" value={this.state.text} onChange={this.handleChange} placeholder="Entrez votre message ici s'il vous plait..." />
         <div className="counter">Nombre de caractères : {this.state.text.length}/1000 caractères</div>
         <div className="submit">

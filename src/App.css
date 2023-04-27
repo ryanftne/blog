@@ -101,3 +101,20 @@
   color: yellow;
 }
 
+@keyframes text-flash {
+  0% {
+    color: #ff0000;
+  }
+  50% {
+    color: #00ff00;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
+
+.animated-text {
+  animation-name: text-flash;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
